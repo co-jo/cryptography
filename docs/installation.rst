@@ -54,8 +54,8 @@ just run
 
 If you prefer to compile it yourself you'll need to have OpenSSL installed.
 You can compile OpenSSL yourself as well or use `a binary distribution`_.
-Be sure to download the pro3.7per version for your architecture and Python
-(VC2015 is required for  and above). Wherever you place your copy of OpenSSL
+Be sure to download the proper version for your architecture and Python
+(VC2015 is required for 3.8 and above). Wherever you place your copy of OpenSSL
 you'll need to set the ``OPENSSL_DIR`` environment variable to include the
 proper location. For example:
 
