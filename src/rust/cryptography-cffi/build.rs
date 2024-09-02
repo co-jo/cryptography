@@ -75,12 +75,6 @@ fn main() {
         build.include(python_include);
     }
 
-    // Enable abi3 mode if we're not using PyPy.
-    if python_impl != "PyPy" {
-        // cp37 (Python 3.7 to help our grep when we some day drop 3.7 support)
-        build.define("Py_LIMITED_API", "0x030700f0");
-    }
-
     if cfg!(windows) {
         build.define("WIN32_LEAN_AND_MEAN", None);
     }
