@@ -85,12 +85,6 @@ fn main() {
     .unwrap()
         == "True";
 
-    // Enable abi3 mode if we're not using PyPy or the free-threaded build
-    if !(python_impl == "PyPy" || is_free_threaded) {
-        // cp38 (Python 3.8 to help our grep when we some day drop 3.8 support)
-        build.define("Py_LIMITED_API", "0x030800f0");
-    }
-
     if cfg!(windows) {
         build.define("WIN32_LEAN_AND_MEAN", None);
     }
